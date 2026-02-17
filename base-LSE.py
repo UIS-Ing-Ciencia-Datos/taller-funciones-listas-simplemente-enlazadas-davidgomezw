@@ -13,8 +13,8 @@ class Nodo:
 class ListaSE:
 	def __init__(self):
 		self.cabeza = None
-  
-  	# Lista Vacia
+
+# Lista Vacia
 	def vacio(self):
 		if self.cabeza == None:
 			print("Está vacia")
@@ -30,3 +30,14 @@ class ListaSE:
 		else:
 			nuevo_nodo.siguiente = self.cabeza
 			self.cabeza = nuevo_nodo
+
+#insertar al final
+def agregarFinal(self, data):
+        nuevo_nodo = Nodo(data)
+        if self.cabeza is None:
+            self.cabeza = nuevo_nodo
+            return
+        else:
+            anterior= self.buscar(data)
+            anterior.siguiente = nuevo_nodo
+            return
