@@ -32,12 +32,14 @@ class ListaSE:
 			self.cabeza = nuevo_nodo
 
 #insertar al final
-def agregarFinal(self, data):
-        nuevo_nodo = Nodo(data)
-        if self.cabeza is None:
-            self.cabeza = nuevo_nodo
-            return
-        else:
-            anterior= self.buscar(data)
-            anterior.siguiente = nuevo_nodo
-            return
+def insertarAlFinal(self, data):
+    nuevo_nodo = Nodo(data)
+
+    if self.cabeza is None:
+        self.cabeza = nuevo_nodo
+    else:
+        actual = self.cabeza
+        while actual.siguiente is not None:
+            actual = actual.siguiente
+
+        actual.siguiente = nuevo_nodo
